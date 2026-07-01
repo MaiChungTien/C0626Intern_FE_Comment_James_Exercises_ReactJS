@@ -1,0 +1,17 @@
+.student-table {
+  width: 100%;
+  border-collapse: collapse; /* Rất quan trọng: giúp đường viền không bị kép */
+  margin-top: 20px;
+}
+
+.student-table th, 
+.student-table td {
+  border: 1px solid #ddd; /* Màu viền xám nhạt */
+  padding: 8px;
+  text-align: left;
+}
+
+.student-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
