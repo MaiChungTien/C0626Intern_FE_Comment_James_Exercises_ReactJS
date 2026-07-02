@@ -1,0 +1,42 @@
+/* Container bao bọc toàn màn hình, giới hạn chiều rộng để dễ nhìn */
+.layout-container {
+    width: 100%;
+    max-width: 800px; /* Có thể điều chỉnh tùy ý */
+    margin: 0 auto;   /* Căn giữa container này giữa màn hình */
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Ép vùng search nằm sát trái và cách phía trên */
+.search-section {
+    width: 100%;
+    margin-top: 40px; /* Tạo khoảng trống phía trên */
+    text-align: left; /* Đẩy nội dung (input) sang sát trái */
+}
+
+.search-section input {
+    padding: 5px 10px;
+    width: 250px;     /* Cho khung search dài ra một chút */
+}
+
+/* Gom nhóm và căn giữa bảng cũng như form thêm mới */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa mọi thứ nằm trong khối này */
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Bắt buộc phải có margin auto để bảng tự canh giữa nếu nó không nằm trong flex container, 
+nhưng vì ta đã dùng align-items: center ở trên nên bảng sẽ tự động vô giữa. */
+.instrument-table {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.add-item-section {
+    margin-top: 50px;
+    text-align: center;
+}
