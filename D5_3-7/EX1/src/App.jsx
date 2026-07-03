@@ -10,7 +10,7 @@ import Footer from "./layout/Footer";
 
 function App() {
   return (
-    <>
+    <div className="d-flex flex-column min-vh-100">
       <NavBar />
       
       <Routes>
@@ -21,7 +21,7 @@ function App() {
         <Route path={"/dashboard/edit/:id"} element={<EditStudent/>} />
       </Routes>
       <Footer/>
-    </>
+    </div>
   );
 }
 

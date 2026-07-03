@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet } from 'react-router-dom';
 import { getStudents, getStudentByName } from "../../service/studentService"; // Import hàm tìm kiếm
 import Delete from "../../components/Delete";
 
@@ -8,24 +8,21 @@ const StudentList = () => {
   const [students, setStudents] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
+  // Hàm load dữ liệu mặc định ban đầu
   const fetchItems = async () => {
-    try {
-      const items = await getStudents();
-      setStudents([...items]);
-    } catch (error) {
-      console.error("Lỗi khi tải danh sách:", error);
-    }
+    const items = await getStudents();
+    setStudents([...items]); 
   };
 
 
   useEffect(() => {
-    try {
-      const results = getStudentByName(searchTerm);
-      setStudents([...results]);
-    } catch (error) {
-      console.error("Lỗi khi tìm kiếm:", error);
-    }
-  }, [searchTerm]);
+      try {
+        const results = getStudentByName(searchTerm);
+        setStudents([...results]);
+      } catch (error) {
+        console.error("Lỗi khi tìm kiếm:", error);
+      }
+  }, [searchTerm]); 
 
   const handleDeleteClick = (id) => {
     setSelectedStudentId(id);
@@ -52,7 +49,7 @@ const StudentList = () => {
           </Link>
         </div>
       </div>
-
+       
       <div className="table-responsive shadow-sm rounded">
         <table className="table table-striped table-hover align-middle text-center mb-0">
           <thead className="table-light">
@@ -80,13 +77,11 @@ const StudentList = () => {
                   <td>{student.Address}</td>
                   <td>
                     <Link to={`/dashboard/edit/${student.ID}`}>
-                      <button className="btn btn-warning btn-sm me-2">
-                        Edit
-                      </button>
+                      <button className="btn btn-warning btn-sm me-2">Edit</button>
                     </Link>
                     <button
                       className="btn btn-danger btn-sm"
-                      onClick={() => handleDeleteClick(student.ID)}
+                      onClick={() => handleDeleteClick(student.ID)} 
                       data-bs-toggle="modal"
                       data-bs-target="#deleteModal"
                     >
@@ -101,7 +96,7 @@ const StudentList = () => {
       </div>
 
       <div className="mt-5">
-        <Outlet />
+        <Outlet /> 
       </div>
 
       <Delete studentId={selectedStudentId} onDeleteSuccess={fetchItems} />
