@@ -1,0 +1,41 @@
+{
+  "students": [
+    {
+      "name": "Maria Anders",
+      "age": 20,
+      "address": "Germany",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Francisco Chang",
+      "age": 25,
+      "address": "Mexico"
+    },
+    {
+      "name": "Roland Mendel",
+      "age": 69,
+      "address": "Austria",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "name": "Helen Bennett",
+      "age": 22,
+      "address": "UK"
+    },
+    {
+      "id": "5",
+      "name": "Yoshi Tannamuri",
+      "age": 28,
+      "address": "Canada"
+    },
+    {
+      "id": "6",
+      "name": "Giovanni Rovelli",
+      "age": 35,
+      "address": "Italy"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
