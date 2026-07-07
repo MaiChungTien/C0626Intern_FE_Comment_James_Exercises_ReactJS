@@ -1,0 +1,41 @@
+{
+  "students": [
+    {
+      "name": "Maria Anders",
+      "age": 20,
+      "address": "Germany",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Francisco Chang",
+      "age": 25,
+      "address": "Mexico"
+    },
+    {
+      "name": "Roland Mendel",
+      "age": 69,
+      "address": "Austria",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "name": "Helen Bennett",
+      "age": 22,
+      "address": "UK"
+    },
+    {
+      "id": "5",
+      "name": "Yoshi Tannamuri",
+      "age": 28,
+      "address": "Canada"
+    }
+  ],
+  "accounts": [
+    {
+      "email": "test@gmail.com",
+      "password": "Password123"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
